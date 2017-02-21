@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css_block %}
+<link rel="stylesheet" type="text/css" href="{% static 'py_app/css/image_posts.css' %}">
+{% endblock %}
+
+{% block content %}
+<img class='img_media' src="{% static 'py_app/img/google-head-office-campus-mountain-view-california-usa-E1K0E0.jpg' %}" alt="Google office"><hr>
+<img class='img_media' src="{% static 'py_app/img/blue_water.jpg' %}"  alt="Blue water"><hr>
+<img class='img_media' src="{% static 'py_app/img/moscow-city-color-60.jpg' %}" alt="Moscow city"><hr>
+<img class='img_media' src="{% static 'py_app/img/green_field.jpg' %}" alt="Green field"><hr>
+<img class='img_media' src="{% static 'py_app/img/hd_pond.jpg' %}" alt="Pond">
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type='image/png' href="https://cdn0.iconfinder.com/data/icons/programming-6/92/icon47-02-32.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!--CSS files in different templates-->
+  {% block css_block %}
+  {% endblock %}
+
+</head>
+<body>
+<nav class = "navbar navbar-inverse" role = "navigation">
+   <div class = "navbar-header">
+      <a class = "navbar-brand" href = "/">Filtron</a>
+   </div>
+   
+   <div>
+      <ul class = "nav navbar-nav">
+         <li class = "active"><a href = "/pyapp/image-posts/">Pics</a></li>
+         <li><a href = "/pyapp/auth-users/">Users</a></li>
+         <li><a href = "/pyapp/register/">Register</a></li>
+      </ul>
+   </div>
+</nav><!--Navbar ends-->
+
+<div class="container-fluid">
+  <center><h1>Pythofrank</h1></center><hr>
+  <div class="row"><!--row1-->
+    <div class="col-sm-2 text-center"></div><!--r1 column1-->
+    <div class="col-sm-8 text-center"><!--r1 column2-->
+      {% block content %}
+
+		  {% endblock %}
+    </div>
+    <div class="col-sm-2 text-center"></div><!--r1 column3-->
+  	</div>
+</div>
+
+</body>
+</html>
+

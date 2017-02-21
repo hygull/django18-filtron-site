@@ -1,0 +1,22 @@
+td,th{
+  		text-align: center;
+}
+
+th{
+  		font-size: 17px;
+  		color:#6C0A0A;
+}
+
+td{
+  		color:gray;
+  		font-family: tahoma;
+  		font-weight: bold;
+}
+
+h1{
+  		color:green;
+}
+
+.img_media{
+		width:70%;
+}
