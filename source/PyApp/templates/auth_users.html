@@ -5,13 +5,18 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'py_app/css/auth_users.css' %}">
 {% endblock %}
 
+{% block after_head %}
+	<a class='btn btn-sm btn-primary' role='button' href='/pyapp/order-by-firstname/'>Order by firstname</a> &nbsp; <a class='btn btn-sm btn-success' role='button' href='/pyapp/auth-users/'>Order by firstname</a></br>
+	<p id='p_ordering_msg'>Current Ordering: <span id='span_ordering_msg'>{{ order }}</span></p>
+{% endblock %}
+
 {% block content %}
 <table class="table table-hover">
 		    <thead>
 		      <tr>
 		        <th>Firstname</th>
 		        <th>Lastname</th>
-		        <th>Roll Number</th>
+		        <th>Email</th>
 		        <th>Profile link</th>
 		      </tr>
 		    </thead>
@@ -22,7 +27,7 @@
 		        <td>{{user.firstname}}</td>
 		        <td>{{user.lastname}}</td>
 		        <td>{{user.email}}</td>
-		        <td><a href="{{user.get_absolute_url}}">view</a></td>
+		        <td><a href="{{user.get_absolute_url}}">view...</a></td>
 		      </tr>
 		    {% endfor %}
 		    </tbody>

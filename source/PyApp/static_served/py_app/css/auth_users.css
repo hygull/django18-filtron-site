@@ -13,6 +13,8 @@ td{
   		font-weight: bold;
 }
 
-h1{
-  		color:green;
+#p_ordering_msg{
+	font-weight: bold;
+	font-family: tahoma;
+	color:green;
 }

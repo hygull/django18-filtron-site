@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <link rel="stylesheet" type="text/css" href="{% static 'py_app/css/base.css' %}">
   <!--CSS files in different templates-->
   {% block css_block %}
   {% endblock %}
@@ -30,7 +32,12 @@
 </nav><!--Navbar ends-->
 
 <div class="container-fluid">
-  <center><h1>Pythofrank</h1></center><hr>
+  <center>
+      <h1>Filtron</h1>
+      {% block after_head %}
+      {% endblock %}
+  </center>
+  <hr>
   <div class="row"><!--row1-->
     <div class="col-sm-2 text-center"></div><!--r1 column1-->
     <div class="col-sm-8 text-center"><!--r1 column2-->
