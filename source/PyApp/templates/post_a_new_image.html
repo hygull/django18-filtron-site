@@ -1,12 +1,15 @@
  {% extends 'base.html' %}
 
 {% block title %}
-Registration | Filtron
+New image post| Filtron
 {% endblock %}
 
  {% block content %}
- 	<form action='' method="POST">{% csrf_token %}
+ 	<form action='' method="POST" enctype="multipart/form-data">{% csrf_token %}
  	{{ form.as_p }}
  	<input type="submit" value='Submit'>
  	</form>
+ 	<br>
+ 	<hr>
+ 	<br>
  {% endblock %}

@@ -13,8 +13,15 @@ td{
   		font-weight: bold;
 }
 
-#p_ordering_msg{
+#p_ordering_msg,#span_ordering_msg{
 	font-weight: bold;
 	font-family: tahoma;
-	color:green;
 }
+#p_ordering_mg{
+	color:blue;
+}
+#span_ordering_msg{
+	color:red;
+}
+
+

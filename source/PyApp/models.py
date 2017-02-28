@@ -26,10 +26,10 @@ class AuthUser(models.Model):
 
 class Post(models.Model):
 	""" A model for storing Post details"""
-	title=models.CharField(max_length=50)
+	title=models.CharField(max_length=100)
 	description=models.TextField()
 	image=models.ImageField()
-	created_at=models.DateTimeField(auto_now=False, auto_now_add=False)
+	created_at=models.DateTimeField(auto_now=False, auto_now_add=True)
 	updated_at=models.DateTimeField(auto_now=True, auto_now_add=False)
 	posted_by=models.ForeignKey(AuthUser,on_delete=models.CASCADE)
 

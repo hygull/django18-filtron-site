@@ -2,7 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>home</title>
+  <title>
+  {% block title %}
+  {% endblock %}
+  </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type='image/png' href="https://cdn0.iconfinder.com/data/icons/programming-6/92/icon47-02-32.png">
@@ -27,6 +30,7 @@
          <li class = "active"><a href = "/pyapp/image-posts/">Pics</a></li>
          <li><a href = "/pyapp/auth-users/">Users</a></li>
          <li><a href = "/pyapp/register/">Register</a></li>
+         <li><a href = "/pyapp/image-posts/new/">New Post</a></li>
       </ul>
    </div>
 </nav><!--Navbar ends-->
@@ -46,9 +50,11 @@
 		  {% endblock %}
     </div>
     <div class="col-sm-2 text-center"></div><!--r1 column3-->
+
   	</div>
 </div>
-
+{% block tooltip %}
+{% endblock %}
 </body>
 </html>
 

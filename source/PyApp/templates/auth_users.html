@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block title %}
+Auth Users | Filtron
+{% endblock %}
+
 {% block css_block %}
 	<link rel="stylesheet" type="text/css" href="{% static 'py_app/css/auth_users.css' %}">
 {% endblock %}
 
 {% block after_head %}
-	<a class='btn btn-sm btn-primary' role='button' href='/pyapp/order-by-firstname/'>Order by firstname</a> &nbsp; <a class='btn btn-sm btn-success' role='button' href='/pyapp/auth-users/'>Order by firstname</a></br>
+	<a class='btn btn-sm btn-primary' role='button' href='/pyapp/order-by-firstname/'>Order by firstname</a> &nbsp; <a class='btn btn-sm btn-success' role='button' href='/pyapp/auth-users/'>Order by registration</a></br>
 	<p id='p_ordering_msg'>Current Ordering: <span id='span_ordering_msg'>{{ order }}</span></p>
 {% endblock %}
 
@@ -33,3 +37,5 @@
 		    </tbody>
 </table>
 {% endblock %}
+
+
