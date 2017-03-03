@@ -1,0 +1,40 @@
+.img_media{
+		width:70%;
+}
+
+span{
+	font-size: 12px;
+	font-weight: bold;
+	font-family: helvetica;
+}
+span.span_label{
+		color:green;
+}
+
+span.span_value{
+	color:gray;
+}
+
+h4.h4_image_title{
+	color:gray;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: helvetica;
+}
+
+#myList li{ display:none;
+}
+#loadMore {
+    color:green;
+    cursor:pointer;
+}
+#loadMore:hover {
+    color:black;
+}
+#showLess {
+    color:red;
+    cursor:pointer;
+}
+#showLess:hover {
+    color:black;
+}

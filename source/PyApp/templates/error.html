@@ -7,10 +7,12 @@ Home | Filtron
 
 {% block css_block %}
 	<link rel="stylesheet" type="text/css" href="{% static 'py_app/css/home.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'py_app/css/error.css' %}">
 {% endblock %}
 
 {% block content %}
-<center><h4> Success</h4>
+<center><h4> Error</h4>
+<h6>{{ dimension_err|safe }}</h6>
 <a href="/">Home</a>
 </center>
 </center>

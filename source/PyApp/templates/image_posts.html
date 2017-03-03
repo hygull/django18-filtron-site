@@ -10,7 +10,7 @@ Image | Posts
 {% endblock %}
 
 {% block content %}
-
+<center>
 	{% for post in posts %}
 		<h4 class="h4_image_title">{{ post.title }}</h4>
 		<img class='img_media' src="{{ post.image.url }}" alt="{{ post.title }}" data-toggle="tooltip" title="{{ post.description }}" data-placement="right">
@@ -19,12 +19,12 @@ Image | Posts
 	{% endfor %}
 	
 	<!--static post -->
-	<h4 class='h4_image_title'>Google office<h4>
+    <h4 class='h4_image_title'>Google office</h4>
 	<img class='img_media' src="{% static 'py_app/img/google-head-office-campus-mountain-view-california-usa-E1K0E0.jpg' %}" alt="Google office" data-toggle="tooltip" title="Google is an American multinational technology company specializing in Internet-related services and products that include online advertising technologies, search, cloud computing, software, and hardware." data-placement="right">
 	<h6><span class="span_label">Posted by &raquo; </span><span class="span_value"> Rishikesh Agrawani</span> <span class="span_label"><br>Posted on &raquo; </span><span class="span_value">Feb. 20, 2017, 3:18 p.m.</span></h6>
 	<hr>
 	<!--static post ends-->
-
+</center>
 {% endblock %}
 
 {% block tooltip %}

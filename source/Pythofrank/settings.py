@@ -41,6 +41,9 @@ INSTALLED_APPS = (
 
     #User app(s)
     "PyApp",
+
+    #3rd party app(s)
+    "crispy_forms",
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,3 +116,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"PyApp","media_dir")
 STATICFILES_DIRS= [
     os.path.join(BASE_DIR,"PyApp","static"),
 ]
+
+CRISPY_TEMPLATE_PACK = "bootstrap3"
+

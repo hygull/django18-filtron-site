@@ -8,5 +8,5 @@ urlpatterns=[
         url(r"^order-by-firstname/$","PyApp.views.order_by_firstname",name="order_by_firstname"),
         url(r"^image-posts/new/$","PyApp.views.post_a_new_image",name='post_a_new_image'),
         url(r"^success/$","PyApp.views.success",name='success'),
-         url(r"^error/$","PyApp.views.error",name='error'),
+        url(r"^error/$","PyApp.views.error",name='error'),
     ] 
