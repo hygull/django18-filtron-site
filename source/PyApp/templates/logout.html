@@ -12,15 +12,9 @@ Home | Filtron
 
 {% block content %}
 <center><h4> Error</h4>
-{% if {{ cookie_err }}%}
-<h6>{{ dimension_err|safe }}</h6>
-{% endfor %}
-
-{% if {{ cookie_err }}%}
-<h6>{{ cookie_err|safe }}</h6>
-{% endfor %}
-
+<h6>{{ logout_msg |safe }}</h6>
 <a href="/">Home</a>
+<a href="/admin/login/">Login again</a>
 </center>
 </center>
 {% endblock %}

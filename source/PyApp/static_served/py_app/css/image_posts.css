@@ -21,20 +21,3 @@ h4.h4_image_title{
 	font-weight: bold;
 	font-family: helvetica;
 }
-
-#myList li{ display:none;
-}
-#loadMore {
-    color:green;
-    cursor:pointer;
-}
-#loadMore:hover {
-    color:black;
-}
-#showLess {
-    color:red;
-    cursor:pointer;
-}
-#showLess:hover {
-    color:black;
-}

@@ -1,3 +1,4 @@
+	
 from django.shortcuts import render
 from .models import AuthUser, Post
 from .forms import UserRegistrationForm, ImagePostingForm
@@ -5,23 +6,12 @@ from django.core.files.images import get_image_dimensions
 # Create your views here.
 
 def home(request):
-	all_cookies = request.COOKIES
-	if "pyapp_username" in all_cookies:
-		print "Cookie named => pyapp_username found. So rendering home page."
-	else:
-		print "Didn't find any cookie named => pyapp_username. So rendering the signup page"
-		form = UserRegistrationForm()
-		return render(request,"registration.html",{"form":form})
+	return render(request,"home.html",{})
 
 def registration(request):
-	if request.method == "POST":
-		form = UserRegistrationForm(request.POST)
-		if form.is_valid():
-			form.save(commit=True)
-			request.set_cookie("pyapp_username",form.cleaned_data["email"]+"::"+form.cleaned_data["fullname"]+"::"+form.cleaned_data["lastname"])
-		return redirect("/pyapp/auth-users/")
-	else:
-		form = UserRegistrationForm()
+	form = UserRegistrationForm(request.POST)
+	if form.is_valid():
+		form.save(commit=True)
 	return render(request,"registration.html",{"form":form})
 
 def order_by_firstname(request):
@@ -31,9 +21,6 @@ def order_by_firstname(request):
 def auth_users(request):
 	users=AuthUser.objects.all()
 	return render(request,"auth_users.html",{"users":users,"order":"Order by registration"})
-
-def login(request):
-	return render(request,"login.html",{})
 
 def image_posts(request):
 	posts = Post.objects.all().order_by("-created_at")
@@ -70,13 +57,3 @@ def success(request):
 
 def error(request):
 	return render(request,"error.html",{})
-
-def logout(request):
-	if "pyapp_username" in request.COOKIES:
-		print "Deleting cookie..."
-		request.delete_cookie("pyapp_username")
-		print "Cookie successfully deleted."
-		return render(request,"logout.html",{"logout_msg":"You successfully logged out"})
-	else:
-		print "Cookie is not set."
-		return render(request,"error.html",{"cookie_err":"Cookie is not set.Register."})

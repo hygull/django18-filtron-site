@@ -9,4 +9,5 @@ urlpatterns=[
         url(r"^image-posts/new/$","PyApp.views.post_a_new_image",name='post_a_new_image'),
         url(r"^success/$","PyApp.views.success",name='success'),
         url(r"^error/$","PyApp.views.error",name='error'),
+        url(r"^login/$","PyApp.views.login",name='login'),
     ] 
